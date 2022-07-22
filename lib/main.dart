@@ -15,7 +15,13 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.teal.shade700,
           title: Center(
-            child: Row(children: [Text('Dog´s'), Icon(Icons.pets)]),
+            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text('My Card'),
+              SizedBox(
+                width: 10.0,
+              ),
+              Icon(Icons.collections_bookmark_outlined)
+            ]),
           ),
         ),
         backgroundColor: Colors.teal,
@@ -91,11 +97,11 @@ class MiCard extends StatelessWidget {
         Center(
           child: CircleAvatar(
             radius: 50.0,
-            backgroundImage: AssetImage('images/husky.jpg'),
+            backgroundImage: AssetImage('images/isaac.png'),
           ),
         ),
         Text(
-          'Tunico',
+          'Isaac Nascimento',
           style: TextStyle(
               fontSize: 40.0,
               color: Colors.white,
@@ -103,7 +109,7 @@ class MiCard extends StatelessWidget {
               fontFamily: 'Pacifico'),
         ),
         Text(
-          'CRAZY DOG',
+          'SOFTWARE DEVELOPER',
           style: TextStyle(
               color: Colors.teal.shade100,
               fontSize: 15.0,
@@ -111,53 +117,49 @@ class MiCard extends StatelessWidget {
               fontWeight: FontWeight.bold,
               fontFamily: 'SourceSansPro'),
         ),
-        Container(
+        SizedBox(
+          height: 20.0,
+          width: 165.0,
+          child: Divider(
+            color: Colors.teal.shade100,
+          ),
+        ),
+        Card(
           color: Colors.white,
           margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-          padding: EdgeInsets.all(10.0),
-          child: Row(
-            children: <Widget>[
-              Icon(
-                Icons.account_circle,
-                size: 23.5,
-                color: Colors.teal,
-              ),
-              SizedBox(
-                width: 10.0,
-              ),
-              Text(
+          child: Padding(
+            padding: const EdgeInsets.all(4.5),
+            child: ListTile(
+              leading: Icon(Icons.account_circle, color: Colors.teal),
+              title: Text(
                 '(61) 98577-7107',
                 style: TextStyle(
                     color: Colors.teal.shade900,
                     fontFamily: 'SourceSansPro',
                     fontSize: 20.0),
-              )
-            ],
+              ),
+            ),
           ),
         ),
-        Container(
+        Card(
           color: Colors.white,
-          padding: EdgeInsets.all(10.0),
           margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
-          child: Row(
-            children: <Widget>[
-              Icon(
+          child: Padding(
+            padding: const EdgeInsets.all(4.5),
+            child: ListTile(
+              leading: Icon(
                 Icons.email,
-                size: 23.5,
                 color: Colors.teal,
               ),
-              SizedBox(
-                width: 10.0,
-              ),
-              Text(
+              title: Text(
                 'isaacs.nascimento17@gmail.com',
                 style: TextStyle(
                   color: Colors.teal.shade900,
-                  fontSize: 18.8,
+                  fontSize: 18.0,
                   fontFamily: 'SourceSansPro',
                 ),
               ),
-            ],
+            ),
           ),
         )
       ],
